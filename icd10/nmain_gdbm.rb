@@ -1,10 +1,14 @@
 require 'csv'
 require 'gdbm'
 
-gdbm = GDBM.new("nmain314.db")
-CSV.open("nmain314.csv", 'r') do |row|
-  if row[7] == ""
-    gdbm[row[6]] = row[2]
+ARGV.each do |a|
+  source = a
+  dest = File.basename(a, ".txt") + ".db"
+  gdbm = GDBM.new(dest)
+  CSV.open(source, 'r') do |row|
+    if row[7] == ""
+      gdbm[row[6]] = row[2]
+    end
   end
+  gdbm.close
 end
-gdbm.close

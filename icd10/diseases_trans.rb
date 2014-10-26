@@ -63,7 +63,7 @@ source.elements.each('//data/record') do |rec|
   name = rec.elements['field[@name="name"]'].text
   jpn = trans[code]
   if jpn != ""
-    target.write("<!-- Code: #{code} -->")
+    target.write("<!-- Code: #{code} -->\n")
     target.write("<tu><tuv lang='EN-US'><seg>#{name}</seg></tuv>\n")
     target.write("<tuv lang='JA'><seg>#{jpn}</seg></tuv></tu>\n")
   end
