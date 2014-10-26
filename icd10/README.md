@@ -41,3 +41,26 @@ Details
   GNU Health ICD10 module.
   This script use nmain314.db to look up Japanese terms.
 
+
+How to use OmegaT
+--------------------
+
+* install OmegaT (from oemgat.org or distribution package)
+
+* start OmegaT
+
+* create project directory from OmegaT
+
+* copy `diseases.tmx` onto OmegaT project directory proj/tm/
+
+* Download PO file for ICD10 from Transifex project
+
+* Place po file to OmegaT project directory proj/source/
+
+* Restart OmegaT
+
+* Enjoy translation
+
+* Generate target file
+
+* Upload result file to Transifex
