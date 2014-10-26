@@ -33,3 +33,39 @@ You can run
 ```
 vagrant up --provider=aws
 ```
+
+installation may be failed because gnuhealth
+ask users about several parameters.
+
+connect
+----------
+
+1.Create ssh config
+
+
+```
+ vagrant ssh-config > vagrant.ssh.config
+```
+
+2. edit ssh config
+
+add it to forwarding X to local
+
+```
+ForwardX11 yes
+```
+
+3. connect server
+
+```
+ssh -F vagrant.ssh.config default
+```
+
+4. start client
+
+```
+gnuhealth
+```
+
+You will see tryton client on your screen.
+
