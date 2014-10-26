@@ -1,0 +1,18 @@
+# Defaults for gnuhealth-server initscript
+
+# Specify the user name (Default: gnuhealth).
+DAEMONUSER="gnuhealth"
+
+# Specify an alternate config file (Default: /etc/gnuhealth-server.conf).
+CONFIGFILE="/etc/gnuhealth/gnuhealth-server.conf"
+
+# Specify the log file (Default: /var/log/gnuhealth/gnuhealth-server.log).
+LOGFILE="/var/log/gnuhealth/gnuhealth-server.log"
+
+# Specify the locale for the server to run (Default: en_US).
+#LANG="fr_FR.UTF-8"
+
+# Additional options that are passed to the Daemon.
+# i.e. to increase the verbosity of the server log add -v
+DAEMON_OPTS=" --config=${CONFIGFILE} --logfile=${LOGFILE}"
+
